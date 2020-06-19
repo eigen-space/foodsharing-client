@@ -11,7 +11,7 @@ script:
   - git checkout $TRAVIS_BRANCH
   - git remote set-url origin https://$USER:$GITHUB_API_KEY@github.com/eigen-space/foodsharing-client.git
   - echo ./cred.pem
-  - ssh -tt -i ./cred.pem ubuntu@$52.59.243.71 sudo rm -r /opt/foodsharing/services
+  - ssh -tt -i ./cred.pem ubuntu@52.59.243.71 sudo rm -r /opt/foodsharing/service
   - yarn deploy;
 before_install:
   - echo "$AWS_CREDENTIALS" >> cred.pem
