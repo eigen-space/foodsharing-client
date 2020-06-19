@@ -12,7 +12,8 @@
     "nodemon": "^2.0.4"
   },
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon",
+    "deploy": ""
   },
   "repository": {
     "type": "git",
