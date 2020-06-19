@@ -16,3 +16,5 @@ script:
   - ssh -o StrictHostKeyChecking=accept-new -tt -i ./cred.pem ubuntu@52.59.243.71 uname -a
   - ssh -tt -i ./cred.pem ubuntu@52.59.243.71 sudo rm -r /opt/foodsharing/service
   - yarn deploy;
+addons:
+  ssh_known_hosts: 52.59.243.71
