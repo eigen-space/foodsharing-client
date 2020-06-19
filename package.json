@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "node-vk-bot-api": "^3.3.4"
+  },
+  "name": "foodsharing-client",
+  "description": "This project is designed to improve the user experience of food sharing.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eigen-space/foodsharing-client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eigen-space/foodsharing-client/issues"
+  },
+  "homepage": "https://github.com/eigen-space/foodsharing-client#readme"
+}
