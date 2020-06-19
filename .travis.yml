@@ -13,6 +13,7 @@ script:
   - echo $AWS_CREDENTIALS >> cred.pem
   - cat ./cred.pem
   - chmod 400 ./cred.pem
+  - ssh-add -K ./cred.pem
   - ssh -o StrictHostKeyChecking=no -tt -i ./cred.pem ubuntu@52.59.243.71 uname -a
   - ssh -tt -i ./cred.pem ubuntu@52.59.243.71 sudo rm -r /opt/foodsharing/service
   - yarn deploy;
