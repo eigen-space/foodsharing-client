@@ -1,0 +1,19 @@
+if: branch =~ ^(master|dev|feature\/.*)$ AND commit_message !~ /auto\/ci:\sset\sversion/
+language: node_js
+node_js:
+  - "11.10"
+git:
+  depth: false
+cache:
+  directories:
+    - node_modules
+script:
+  - git checkout $TRAVIS_BRANCH
+  - git remote set-url origin https://$USER:$GITHUB_API_KEY@github.com/eigen-space/foodsharing-client.git
+  - echo $AWS_CREDENTIALS >> cred.pem
+  - cat ./cred.pem
+  - chmod 400 ./cred.pem
+  - ssh -o StrictHostKeyChecking=no -tt -i ./cred.pem ubuntu@52.59.243.71 uname -a
+  - ssh -tt -i ./cred.pem ubuntu@52.59.243.71 sudo rm -r /opt/foodsharing/service
+  - yarn deploy;
+
