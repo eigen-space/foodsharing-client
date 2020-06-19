@@ -16,4 +16,3 @@ script:
   - ssh -o StrictHostKeyChecking=no -tt -i ./cred.pem ubuntu@52.59.243.71 uname -a
   - ssh -tt -i ./cred.pem ubuntu@52.59.243.71 sudo rm -r /opt/foodsharing/service
   - yarn deploy;
-
