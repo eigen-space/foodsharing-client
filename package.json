@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "node-vk-bot-api": "^3.3.4"
+    "node-postgres-named": "^2.4.1",
+    "node-vk-bot-api": "^3.3.4",
+    "pg": "^8.2.1"
   },
   "name": "foodsharing-client",
   "description": "This project is designed to improve the user experience of food sharing.",
