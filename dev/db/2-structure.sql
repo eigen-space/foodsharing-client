@@ -18,7 +18,7 @@ create table public.role(
 );
 
 create table public.account(
-    id uuid DEFAULT uuid_generate_v4(),
+    id int,
     name text not null,
     "roleId" uuid not null,
     PRIMARY KEY (id),
@@ -42,7 +42,7 @@ create table public.category(
 create table public.slot(
     id uuid DEFAULT uuid_generate_v4(),
     "distributionRequestId" uuid not null,
-    "accountId" uuid,
+    "accountId" int,
     status text not null,
     PRIMARY KEY (id),
     FOREIGN KEY ("distributionRequestId") references public."distributionRequest"(id),
