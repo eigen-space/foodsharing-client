@@ -11,9 +11,6 @@ create table public."distributionRequest"(
     PRIMARY KEY (id)
 );
 
-alter table public."distributionRequest"
-    alter column id set default uuid_generate_v4();
-
 create table public.role(
     id uuid DEFAULT uuid_generate_v4(),
     name text not null,
