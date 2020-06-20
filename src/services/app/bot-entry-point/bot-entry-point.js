@@ -96,7 +96,7 @@ class BotEntryPoint {
 
                 const { amount, time, measure, location } = ctx.session;
                 const { latitude, longitude } = location.coordinates;
-                ctx.reply(`Ты записан на раздачу в ${time}. Удачи :)`);
+                ctx.reply(`Супер! Пойду писать спасателям продуктов :)`);
             });
 
         this.stage = new Stage(this.scene);
