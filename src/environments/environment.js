@@ -1,5 +1,5 @@
 const environment = {
-    vk: { token: 'e351c7b3a28821d53148bd9038bb67c501971d1dd2404491c0b8e2755e441f9e8da1a7d2e4e1d7bf68289' },
+    vk: { token: '2b398f18708acda7ad8ea18f9a8b84ce3c60379b6a85978c56cc2a73fbfbcda4957ed5abe6929fdb0d088' },
     db: {}
 }
 
