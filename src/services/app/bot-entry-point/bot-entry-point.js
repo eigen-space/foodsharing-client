@@ -105,13 +105,6 @@ class BotEntryPoint {
         this.bot.command('/Раздача', (ctx) => {
             ctx.scene.enter('Раздача');
         });
-
-        setInterval(() => api('messages.send', {
-            user_id: this.id,
-            message: 'Again!',
-            random_id: Date.now(),
-            access_token: this.token
-        }), 600000);
     }
 
     launch() {
