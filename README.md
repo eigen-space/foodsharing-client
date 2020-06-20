@@ -24,23 +24,23 @@
 
 # Как воспользоваться Фуди?
 
-0. Нужно перейти в [сообщество](https://vk.com/foodieshares), где живёт Фуди.
-1. И просто начать общение с Фуди, нажав "Написать сообщение".
-2. Набрать /Раздача
-3. Далее он поможет пройти сценарий подготовки раздачи еды к доставке.
+1. Нужно перейти в [сообщество](https://vk.com/foodieshares), где живёт Фуди.
+2. И просто начать общение с Фуди, нажав "Написать сообщение".
+3. Набрать /Раздача
+4. Далее он поможет пройти сценарий подготовки раздачи еды к доставке.
 
 ![](./dev/assets/scenario.gif)
 
 # Материалы для понимания предметной области
 
-0. [РИФ.Онлайн 2020: Фудшеринг/Sharing Economy](https://www.youtube.com/watch?v=FTo4VpzcX-c)
-1. [Исследование от авторов кейса](https://tiarcenter.com/wp-content/uploads/2019/11/ENG_Foodsharing-in-Russia_2019.pdf)
-2. [Проект “1 миллион тонн”](https://1mlntons.ru/)
-3. [РАЭК / Sharing Economy](https://raec.ru/clusters/sharingeconomy/)
-4. [Самая крупная группа по фудшерниг, СПб, Москва](https://vk.com/sharingfood)
-5. [Приложение Food Drive](https://play.google.com/store/apps/details?id=ru.amio.fooddrive&hl=ru)
-6. [Что нужно, чтобы стать фудсейвером?](https://foodsharing.ru/members/)
-7. [Frutafeia. Распределение свежих, но некрасивых овощей и фруктов](https://frutafeia.pt/en/the-project)
+* [РИФ.Онлайн 2020: Фудшеринг/Sharing Economy](https://www.youtube.com/watch?v=FTo4VpzcX-c)
+* [Исследование от авторов кейса](https://tiarcenter.com/wp-content/uploads/2019/11/ENG_Foodsharing-in-Russia_2019.pdf)
+* [Проект “1 миллион тонн”](https://1mlntons.ru/)
+* [РАЭК / Sharing Economy](https://raec.ru/clusters/sharingeconomy/)
+* [Самая крупная группа по фудшерниг, СПб, Москва](https://vk.com/sharingfood)
+* [Приложение Food Drive](https://play.google.com/store/apps/details?id=ru.amio.fooddrive&hl=ru)
+* [Что нужно, чтобы стать фудсейвером?](https://foodsharing.ru/members/)
+* [Frutafeia. Распределение свежих, но некрасивых овощей и фруктов](https://frutafeia.pt/en/the-project)
 
 
 
