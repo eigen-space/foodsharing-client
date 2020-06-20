@@ -30,10 +30,10 @@ class BotEntryPoint {
                 ctx.scene.next();
                 ctx.reply('Select category', null, Markup
                     .keyboard([
-                        'vegetables',
-                        'fruit',
-                        'baked',
-                        'grain'
+                        'Vegetables',
+                        'Fruit',
+                        'Baked',
+                        'Grain'
                     ])
                     .inline(),
                 );
@@ -49,11 +49,11 @@ class BotEntryPoint {
 
                 ctx.scene.next();
 
-                ctx.reply('measure', null, Markup
+                ctx.reply('Select measure', null, Markup
                     .keyboard([
-                        'liter',
-                        'kilogram',
-                        'box'
+                        'Liters',
+                        'Kilograms',
+                        'Boxex'
                     ])
                     .inline(),
                 );
@@ -63,10 +63,10 @@ class BotEntryPoint {
 
                 ctx.scene.next();
 
-                ctx.reply('Send your geolocation pls', null, Markup
+                ctx.reply('Send your geolocation, please', null, Markup
                     .keyboard([
                         Markup.button({ action: { type: 'location' } }),
-                        'No!',
+                        'No, thanks :(',
                     ])
                     .oneTime());
             },
