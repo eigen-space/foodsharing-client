@@ -94,8 +94,6 @@ class BotEntryPoint {
 
                 ctx.scene.leave();
 
-                const { amount, time, measure, location } = ctx.session;
-                const { latitude, longitude } = location.coordinates;
                 ctx.reply(`Супер! Пойду писать спасателям продуктов :)`);
             });
 
