@@ -94,8 +94,6 @@ class BotEntryPoint {
 
                 ctx.scene.leave();
 
-                const { amount, time, measure, location } = ctx.session;
-                const { latitude, longitude } = location.coordinates;
                 ctx.reply(`Супер! Пойду писать спасателям продуктов :)`);
             });
 
@@ -107,13 +105,6 @@ class BotEntryPoint {
         this.bot.command('/Раздача', (ctx) => {
             ctx.scene.enter('Раздача');
         });
-
-        setInterval(() => api('messages.send', {
-            user_id: this.id,
-            message: 'Again!',
-            random_id: Date.now(),
-            access_token: this.token
-        }), 600000);
     }
 
     launch() {
