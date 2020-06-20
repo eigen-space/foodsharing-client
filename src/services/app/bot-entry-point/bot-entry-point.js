@@ -1,3 +1,4 @@
+const { MeasureType } = require("../../../enums/enums.js");
 const VkBot = require('node-vk-bot-api');
 const api = require('node-vk-bot-api/lib/api');
 const Markup = require('node-vk-bot-api/lib/markup');
@@ -25,59 +26,77 @@ class BotEntryPoint {
             );
         });
 
-        this.scene = new Scene('new',
+        this.scene = new Scene('Раздача',
             (ctx) => {
                 ctx.scene.next();
-                ctx.reply('Select category', null, Markup
+                ctx.reply('Что отдаем?', null, Markup
                     .keyboard([
-                        'Vegetables',
-                        'Fruit',
-                        'Baked',
-                        'Grain'
+                        'Овощи',
+                        'Фрукты',
+                        'Выпечка',
+                        'Крупы'
                     ])
-                    .inline(),
+                    .oneTime(),
                 );
-            },
-            (ctx) => {
-                ctx.session.what = ctx.message.text;
-
-                ctx.scene.next();
-                ctx.reply('What amount?');
             },
             (ctx) => {
                 ctx.session.amount = ctx.message.text;
 
                 ctx.scene.next();
 
-                ctx.reply('Select measure', null, Markup
+                ctx.reply('Выбери в чем измеряется объем :)', null, Markup
                     .keyboard([
-                        'Liters',
-                        'Kilograms',
-                        'Boxex'
+                        MeasureType.KILOGRAMS,
+                        MeasureType.BOXES,
+                        MeasureType.LITERS
                     ])
-                    .inline(),
+                    .oneTime(),
                 );
+            },
+            (ctx) => {
+                ctx.session.what = ctx.message.text;
+
+                ctx.scene.next();
+                let amountContext = 'киллограм'
+                switch (ctx.session.amount) {
+                    case MeasureType.BOXES: {
+                        amountContext = 'коробок';
+                        break;
+                    }
+                    case MeasureType.LITERS: {
+                        amountContext = 'литров';
+                        break;
+                    }
+                }
+
+                ctx.reply(`Уточни, сколько ${amountContext}`);
             },
             (ctx) => {
                 ctx.session.measure = ctx.message.text;
 
                 ctx.scene.next();
 
-                ctx.reply('Send your geolocation, please', null, Markup
+                ctx.reply('Скажи нам, где будет раздача', null, Markup
                     .keyboard([
-                        Markup.button({ action: { type: 'location' } }),
-                        'No, thanks :(',
+                        Markup.button({ action: { type: 'location' } })
                     ])
                     .oneTime());
             },
             (ctx) => {
                 ctx.session.location = ctx.message.geo;
 
+                ctx.scene.next();
+
+                ctx.reply('И последнее, время :)');
+            },
+            (ctx) => {
+                ctx.session.time = ctx.message.text;
+
                 ctx.scene.leave();
 
-                const { amount, what, measure, location } = ctx.session;
+                const { amount, time, measure, location } = ctx.session;
                 const { latitude, longitude } = location.coordinates;
-                ctx.reply(`You will hand out ${amount} ${measure} of ${what} one the ${latitude}:${longitude}`);
+                ctx.reply(`Ты записан на раздачу в ${time}. Удачи :)`);
             });
 
         this.stage = new Stage(this.scene);
@@ -85,8 +104,8 @@ class BotEntryPoint {
         this.bot.use(this.session.middleware());
         this.bot.use(this.stage.middleware());
 
-        this.bot.command('/new', (ctx) => {
-            ctx.scene.enter('new');
+        this.bot.command('/Раздача', (ctx) => {
+            ctx.scene.enter('Раздача');
         });
 
         setInterval(() => api('messages.send', {
