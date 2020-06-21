@@ -19,8 +19,8 @@
 
 # Ключевые материалы
 
-* Презентация
-* Расчёт кейса
+* [Презентация](https://docs.google.com/presentation/d/1A52SPkDztG4iKeATBquUkFVnbQMmjeDe8dShNlfhj00/edit?usp=sharing)
+* [Расчёт кейса](https://docs.google.com/spreadsheets/d/1NL8BJbZW9vImy35-pw8UBxNtY5KZLFsj6vtfpyLWeSU/edit?usp=sharing)
 
 # Как воспользоваться Фуди?
 
